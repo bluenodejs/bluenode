@@ -4,7 +4,9 @@
   "description": "Bluenode is a visual programming interface",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "lerna run build --stream",
+    "postinstall": "lerna bootstrap"
   },
   "repository": {
     "type": "git",
@@ -17,6 +19,24 @@
   },
   "homepage": "https://github.com/bluenodejs/bluenode#readme",
   "devDependencies": {
+    "cz-conventional-changelog": "^2.0.0",
     "lerna": "^2.0.0-rc.5"
+  },
+  "dependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1",
+    "babel-plugin-transform-export-extensions": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "debug": "^2.6.8",
+    "nodemon": "^1.11.0",
+    "rimraf": "^2.6.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }

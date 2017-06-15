@@ -4,8 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "../../node_modules/.bin/nodemon -w src index.js"
   },
   "author": "Sergey Sova <i.am@lestad.net> (https://lestad.top)",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "kcors": "^2.2.1",
+    "koa": "^2.2.0",
+    "koa-body": "^2.1.0",
+    "koa-logger": "^3.0.0",
+    "koa-router": "^7.2.0",
+    "@bluenode/core": "^0.0.0"
+  }
 }

@@ -2,10 +2,15 @@
   "name": "@bluenode/core",
   "version": "0.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
+    "clear": "../../node_modules/.bin/rimraf ./dist",
+    "build": "../../node_modules/.bin/babel -d dist src",
+    "dev": "../../node_modules/.bin/nodemon -w src -x 'npm run build'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Sergey Sova <i.am@lestad.net> (https://lestad.top)",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+  }
 }
